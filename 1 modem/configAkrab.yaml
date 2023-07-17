@@ -1,0 +1,214 @@
+---
+rules:
+- RULE-SET,MAXstream,MAXstream
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Instagram,Instagram
+- RULE-SET,Facebook,Facebook
+- RULE-SET,TikTok,TikTok
+- RULE-SET,Whatsapp,Whatsapp
+- RULE-SET,Line,Line
+- RULE-SET,GamesMax,GamesMax
+- RULE-SET,MusicMax,MusicMax
+- RULE-SET,Pornografi,Pornografi
+- RULE-SET,Speedtest,Speedtest
+- RULE-SET,LAN,DIRECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- MATCH,GLOBAL
+dns:
+  nameserver:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  - 9.9.9.9
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+unified-delay: true
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+mode: rule
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: reyre
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+ipv6: false
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+profile:
+  store-selected: true
+  tracing: true
+  store-fake-ip: true
+rule-providers:
+  MusicMax:
+    type: file
+    behavior: classical
+    path: "./rule_provider/MusicMax.yaml"
+  GamesMax:
+    type: file
+    behavior: classical
+    path: "./rule_provider/GamesMax.yaml"
+  Line:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Line.yaml"
+  Whatsapp:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Whatsapp.yaml"
+  TikTok:
+    type: file
+    behavior: classical
+    path: "./rule_provider/TikTok.yaml"
+  Facebook:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Facebook.yaml"
+  Instagram:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Instagram.yaml"
+  YouTube:
+    type: file
+    behavior: classical
+    path: "./rule_provider/YouTube.yaml"
+  MAXstream:
+    type: file
+    behavior: classical
+    path: "./rule_provider/MAXstream.yaml"
+  Pornografi:
+    type: file
+    behavior: domain
+    path: "./rule_provider/Porn.yaml"
+  Speedtest:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Speedtest.yaml"
+  LAN:
+    type: file
+    behavior: ipcidr
+    path: "./rule_provider/Lan.yaml"
+proxy-providers:
+  "📶AKUN📶":
+    type: file
+    path: "./proxy_provider/AKUN.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+proxy-groups:
+- name: "📶VPN📶"
+  type: select
+  disable-udp: false
+  use:
+  - "📶AKUN📶"
+  url: http://cp.cloudflare.com/generate_204
+  interval: '300'
+  tolerance: '150'
+  interface-name: eth1
+#####################################
+- name: "💯LOADBALANCE💯"
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - "📶AKUN📶"
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+- name: "🌍PING🌍"
+  type: url-test
+  disable-udp: false
+  use:
+  - "📶AKUN📶"
+  url: http://cp.cloudflare.com/generate_204
+  interval: '300'
+  tolerance: '150'
+#######################################
+- name: Whatsapp
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: Line
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: GamesMax
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: MusicMax
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: TikTok
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: Facebook
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: Instagram
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: YouTube
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: MAXstream
+  type: select
+  proxies:
+  - DIRECT
+  - "🌍PING🌍"
+  - "📶VPN📶"
+  - "💯LOADBALANCE💯"
+- name: Pornografi
+  type: select
+  proxies:
+  - "💯LOADBALANCE💯"
+  - "🌍PING🌍"
+  - REJECT
+- name: Speedtest
+  type: select
+  proxies:
+  - DIRECT
+  - "💯LOADBALANCE💯"
+  - "📶VPN📶"

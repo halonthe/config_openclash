@@ -1,0 +1,30 @@
+proxies:
+- name: biznet-tr
+  type: trojan
+  server: trojan.lendirsosmed.my.id
+  port: 443
+  password: 2e4c49d6-8d6b-4a6b-adb9-548f4591daf9
+  udp: true
+  sni: teams.microsoft.com
+  alpn:
+  - http/1.1
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: teams.microsoft.com
+
+- name: fastssh
+  server: sg6-trojan.bonds.id
+  port: 443
+  type: trojan
+  password: 34bb62e0-0c43-11ee-ba16-1239d0255272
+  network: ws
+  sni: teams.microsoft.com
+  skip-cert-verify: true
+  udp: true
+  ws-opts:
+    path: /howdy
+  headers:
+    Host: teams.microsoft.com

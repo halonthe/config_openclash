@@ -1,0 +1,36 @@
+payload:  
+ #TikTok
+  - DOMAIN-SUFFIX,tiktokcdn.com #Domain Streaming
+  - DOMAIN-SUFFIX,abtest-sg-tiktok.byteoversea.com
+  - DOMAIN-SUFFIX,abtest-va-tiktok.byteoversea.com
+  - DOMAIN-SUFFIX,isnssdk.com
+  - DOMAIN-SUFFIX,lf1-ttcdn-tos.pstatp.com
+  - DOMAIN-SUFFIX,muscdn.com
+  - DOMAIN-SUFFIX,musemuse.cn
+  - DOMAIN-SUFFIX,musical.ly
+  - DOMAIN-SUFFIX,p1-tt-ipv6.byteimg.com
+  - DOMAIN-SUFFIX,p1-tt.byteimg.com
+  - DOMAIN-SUFFIX,p16-ad-sg.ibyteimg.com
+  - DOMAIN-SUFFIX,p16-tiktok-sg.ibyteimg.com
+  - DOMAIN-SUFFIX,p16-tiktok-sign-va-h2.ibyteimg.com
+  - DOMAIN-SUFFIX,p16-tiktok-va-h2.ibyteimg.com
+  - DOMAIN-SUFFIX,p16-tiktok-va.ibyteimg.com
+  - DOMAIN-SUFFIX,p16-va-tiktok.ibyteimg.com
+  - DOMAIN-SUFFIX,p26-tt.byteimg.com
+  - DOMAIN-SUFFIX,p3-tt-ipv6.byteimg.com
+  - DOMAIN-SUFFIX,p9-tt.byteimg.com
+  - DOMAIN-SUFFIX,quic-tiktok-core-proxy-i18n-gcpva.byteoversea.net
+  - DOMAIN-SUFFIX,quic-tiktok-proxy-i18n-gcpva.byteoversea.net
+  - DOMAIN-SUFFIX,sf1-ttcdn-tos.pstatp.com
+  - DOMAIN-SUFFIX,sf16-ttcdn-tos.ipstatp.com
+  - DOMAIN-SUFFIX,sf6-ttcdn-tos.pstatp.com
+  - DOMAIN-SUFFIX,sgsnssdk.com
+  - DOMAIN-SUFFIX,tiktok-lb-alisg.byteoversea.net
+  - DOMAIN-SUFFIX,tiktok-lb-maliva.byteoversea.net
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokcdn-in.com
+  - DOMAIN-SUFFIX,tiktokcdn-us.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-SUFFIX,ttlivecdn.com
+  - DOMAIN-SUFFIX,ttlivecdn.com.wsdvs.com
+  - DOMAIN-SUFFIX,ttoversea.net

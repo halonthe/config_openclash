@@ -1,0 +1,14 @@
+payload:  
+ #YouTube
+  - DOMAIN-SUFFIX,googlevideo.com #Domain Streaming
+  - DOMAIN-SUFFIX,video.google.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,youtubeeducation.com
+  - DOMAIN-SUFFIX,youtubekids.com
+  - DOMAIN-SUFFIX,yt.be
+  - DOMAIN-SUFFIX,yt3.ggpht.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,youtube.googleapis.com 
+  - DOMAIN-SUFFIX,youtubei.googleapis.com
+  - DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com

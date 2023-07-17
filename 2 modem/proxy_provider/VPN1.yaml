@@ -1,0 +1,17 @@
+proxies:
+- name: MelbiRM1
+  type: trojan
+  server: xxxxxxxxxxxxxxx
+  port: 443
+  password: xxxxxxxxx
+  udp: true
+  sni: xxxxxxxxxxxxxxxxxxx
+  alpn:
+  - http/1.1
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: xxxxxxxxxxxxxxxx
+    headers:
+      Host: xxxxxxxxxxxxxxxx
+  interface-name: eth3

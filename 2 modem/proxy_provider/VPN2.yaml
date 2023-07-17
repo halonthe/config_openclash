@@ -1,0 +1,17 @@
+proxies:
+- name: MelbiRM2
+  type: trojan
+  server: xxxxxxxxxxxxxx
+  port: 443
+  password: xxxxxxxxxxxxxxxxx
+  udp: true
+  sni: xxxxxxxxxxxxxx
+  alpn:
+  - http/1.1
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: xxxxxxxxxxxxxxx
+    headers:
+      Host: xxxxxxxxxxxxx
+  interface-name: eth0

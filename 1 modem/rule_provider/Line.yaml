@@ -1,0 +1,30 @@
+payload:  
+ #Line
+  - DOMAIN-KEYWORD,line-apps
+  - DOMAIN-SUFFIX,lin.ee
+  - DOMAIN-SUFFIX,line-cdn.net
+  - DOMAIN-SUFFIX,line-scdn.net
+  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,line.naver.jp
+  - DOMAIN-SUFFIX,linecorp.com
+  - DOMAIN-SUFFIX,linemyshop.com
+  - DOMAIN-SUFFIX,lineshoppingseller.com
+  - DOMAIN-SUFFIX,today-line-me.cdn.ampproject.org
+  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,line-apps.com
+  - DOMAIN-SUFFIX,line-scdn.net
+  - DOMAIN-SUFFIX,naver.jp
+  - IP-CIDR,103.2.30.0/23 
+  - IP-CIDR,125.209.208.0/20 
+  - IP-CIDR,147.92.128.0/17 
+  - IP-CIDR,203.104.144.0/21 
+  - DST-PORT,10607 
+  - DST-PORT,11729 
+  - DST-PORT,11124 
+  - DST-PORT,14436 
+  - DST-PORT,17028 
+  - DST-PORT,17151 
+  - DST-PORT,20428 
+  - DST-PORT,21041 
+  - DST-PORT,26462 
+  - DST-PORT,26677 

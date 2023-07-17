@@ -1,0 +1,60 @@
+# JIKA MENGGUNAKAN AKUN VLESS WAJIB MENGAKTIFKAN META CORE
+# JIKA MENGGUNAKAN ISP BERBEDAH TAMBAHKAN "interface-name: <nama interface kalian>" TANPA TANDA PETIK TETAPI JIKA ISP SAMA TIDAK USAH DITAMBAHKAN
+
+proxies:
+# TROJAN GFW
+  - name: trojan gfw
+    server: id-ikd.tjvpn.org
+    port: 443
+    type: trojan
+    password: d66a7c80-371c-11ed-b538-225401db9d57
+    skip-cert-verify: true
+    sni: bug.com
+    udp: true
+# TROJAN GO & WS
+  - name: trojan go & ws
+    server: id-ikd.tjvpn.org
+    port: 443
+    type: trojan
+    password: d66a7c80-371c-11ed-b538-225401db9d57
+    skip-cert-verify: true
+    sni: bug.com
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: bug.com
+    udp: true
+# VMESS
+  - name: vmess
+    server: v2ray2.udpgw.com
+    port: 443
+    type: vmess
+    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: bug.com
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: bug.com
+    udp: true
+# VLESS
+  - name: vless
+    server: id1-ws.xvless.xyz
+    port: 443
+    type: vless
+    uuid: 00c90ece-d7d7-472a-a869-f512d9a5ed89
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: bug.com
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        Host: id1-ws.xvless.xyz
+    udp: true
