@@ -16,7 +16,7 @@ Download zip master dan ekstrak file <a href="https://github.com/halonthe/config
 
 # Persiapan
 1. Aktifkan meta core
-<img src="[Screenshot 2023-05-12 203415.png](https://raw.githubusercontent.com/halonthe/config_openclash/main/Screenshot%202023-05-12%20203415.png)"/></br>
+<img src="https://raw.githubusercontent.com/halonthe/config_openclash/main/Screenshot%202023-05-12%20203415.png"/></br>
 2. Upload semua file di folder `proxy_provider` ke `Openclash >> config_editor >> proxy_provider`
 3. Upload semua file di folder `rule_provider` ke `Openclash >> config_editor >> rule_provider`
 4. Masuk ke `Config Manage`. upload config file `configAkrab.yaml` kemudian aktifkan
