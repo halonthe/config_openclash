@@ -10,6 +10,10 @@
   - [Snell](#snell)
   - [Trojan](#trojan)
 
+## Download Config
+
+Download zip master dan ekstrak file [**openclash-config.zip**]([https://github.com/halonthe/config_openclash/archive/refs/heads/main.zip])
+
 # Persiapan
 1. Aktifkan meta core
 <img src="Screenshot 2023-05-12 203415.png"/></br>
