@@ -12,7 +12,7 @@
 
 ## Download Config
 
-Download zip master dan ekstrak file [**openclash-config.zip**]([https://github.com/halonthe/config_openclash/archive/refs/heads/main.zip])
+Download zip master dan ekstrak file <a href="https://github.com/halonthe/config_openclash/archive/refs/heads/main.zip">main.zip</a>
 
 # Persiapan
 1. Aktifkan meta core
